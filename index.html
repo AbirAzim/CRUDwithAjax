@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <h1 class="display-4 text-center">Learning <span class="text-bold text-primary">AJAX</span> </h1>
+
+        <div class="row py-5">
+            <div class="col">
+                <input type="text" placeholder="Enter Name" class="form-control" id="nameField">
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Enter Phone Number" class="form-control" id="phoneField">
+            </div>
+            <div class="col">
+                <input type="email" placeholder="Enter Email" class="form-control" id="emailField">
+            </div>
+            <div class="col text-right">
+                <div class="btn btn-primary" id="save">Enter</div>
+            </div>
+        </div>
+
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>
+                        <div class="btn btn-warning">Edit</div>
+                        <div class="btn btn-danger">Delete</div>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+
+
+        <div class="modal fade" id="editContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nameEdit" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="nameEdit">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Email</label>
+                                <input type="email" class="form-control" id="emailEdit"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneEdit" class="col-form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneEdit">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="editSave">Okay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./dist/bundle.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
